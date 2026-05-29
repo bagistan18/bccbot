@@ -1,0 +1,137 @@
+.login-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+}
+
+.login-hero {
+  position: relative;
+  background: var(--color-sidebar) url("https://images.unsplash.com/photo-1562774053-701939374585?w=1200&q=80") center / cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-8);
+  color: var(--color-text-inverse);
+}
+
+.login-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(15, 41, 74, 0.85) 0%,
+    rgba(15, 41, 74, 0.55) 50%,
+    rgba(37, 99, 235, 0.35) 100%
+  );
+}
+
+.login-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.login-hero__brand .logo-text {
+  color: white;
+}
+
+.login-hero__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 32rem;
+  padding: var(--space-12) 0;
+}
+
+.login-hero__title {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: var(--space-4);
+  color: white;
+}
+
+.login-hero__subtitle {
+  font-size: var(--text-lg);
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+}
+
+.login-hero__footer {
+  font-size: var(--text-xs);
+  color: rgba(255, 255, 255, 0.65);
+  margin-top: auto;
+}
+
+.login-panel {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  padding: var(--space-8) clamp(var(--space-6), 5vw, var(--space-12));
+}
+
+.login-panel__lang {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: var(--space-10);
+}
+
+.login-panel__header {
+  margin-bottom: var(--space-8);
+}
+
+.login-panel__header h1 {
+  color: var(--color-text);
+  margin-bottom: var(--space-2);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  max-width: 400px;
+  width: 100%;
+}
+
+.login-form__actions {
+  margin-top: var(--space-2);
+}
+
+.login-alt {
+  margin-top: var(--space-6);
+  max-width: 400px;
+  width: 100%;
+}
+
+.login-alt__buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.login-support {
+  margin-top: auto;
+  padding-top: var(--space-8);
+  text-align: center;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  max-width: 400px;
+  width: 100%;
+}
+
+.login-support a {
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .login-page {
+    grid-template-columns: 1fr;
+  }
+  .login-hero {
+    min-height: 280px;
+  }
+  .login-hero__content {
+    padding: var(--space-6) 0;
+  }
+}

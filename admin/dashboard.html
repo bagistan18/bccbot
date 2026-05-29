@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard — QazTU</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/app.css" />
+  </head>
+  <body data-role="admin" data-page="dashboard.html">
+    <div class="app-shell">
+      <div id="sidebar-root"></div>
+      <div class="main-wrap">
+        <div id="topbar-root"></div>
+        <main class="main-content">
+          <div id="metrics-root" class="metrics-grid"></div>
+
+          <div class="dashboard-grid-2-1">
+            <div class="card rounded-2xl">
+              <div class="card-header">
+                <h2 class="card-title">Academic Performance Statistics</h2>
+                <div class="chart-legend">
+                  <span class="chart-legend__item"><span class="chart-legend__dot chart-legend__dot--primary"></span> GPA Avg</span>
+                  <span class="chart-legend__item"><span class="chart-legend__dot chart-legend__dot--sky"></span> Pass Rate</span>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="chart-wrap">
+                  <canvas id="chart-performance"></canvas>
+                </div>
+              </div>
+            </div>
+
+            <div class="card rounded-2xl">
+              <div class="card-header">
+                <h2 class="card-title">Student Distribution by Faculty</h2>
+              </div>
+              <div class="card-body">
+                <div class="chart-wrap">
+                  <canvas id="chart-faculty"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dashboard-grid-3">
+            <div class="card rounded-2xl">
+              <div class="card-header">
+                <h2 class="card-title">Latest Announcements</h2>
+                <a href="announcements.html" class="card-link">View all</a>
+              </div>
+              <div class="card-body" id="announcements-root"></div>
+            </div>
+
+            <div class="card rounded-2xl">
+              <div class="card-header">
+                <h2 class="card-title">Recent Activity</h2>
+                <a href="reports.html" class="card-link">View all</a>
+              </div>
+              <div class="card-body" id="activity-root"></div>
+            </div>
+
+            <div class="card rounded-2xl">
+              <div class="card-header">
+                <h2 class="card-title">Quick Actions</h2>
+              </div>
+              <div class="card-body">
+                <div id="quick-actions-root" class="quick-actions"></div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="../assets/js/i18n.js"></script>
+    <script src="../assets/js/layout.js"></script>
+    <script src="../assets/js/nav-config.js"></script>
+    <script src="../assets/js/dashboard-data.js"></script>
+    <script src="../assets/js/charts.js"></script>
+    <script src="../assets/js/app-shell.js"></script>
+  </body>
+</html>

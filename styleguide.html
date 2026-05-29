@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QazTU Design System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <style>
+      .sg-page { max-width: 960px; margin: 0 auto; padding: 2rem; }
+      .sg-section { margin-bottom: 3rem; }
+      .sg-section h2 { margin-bottom: 1rem; color: var(--color-text); }
+      .sg-row { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+      .sg-sidebar-preview {
+        background: var(--color-sidebar);
+        padding: 1.5rem;
+        border-radius: var(--radius-xl);
+        max-width: 220px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="sg-page">
+      <header class="sg-section">
+        <div class="logo" style="margin-bottom: 0.5rem">
+          <div class="logo-mark">Q</div>
+          <div>
+            <div class="logo-text" style="color: var(--color-text)">QazTU</div>
+            <div class="logo-subtitle" style="color: var(--color-text-muted)">Design System — Step 1</div>
+          </div>
+        </div>
+        <p class="text-muted">Token preview and core components. <a href="login.html">Go to Login →</a></p>
+      </header>
+
+      <section class="sg-section">
+        <h2>Color palette</h2>
+        <div class="swatch-grid">
+          <div class="swatch"><div class="swatch-color" style="background:#0f294a"></div><div class="swatch-info"><strong>Sidebar</strong>#0F294A</div></div>
+          <div class="swatch"><div class="swatch-color" style="background:#2563eb"></div><div class="swatch-info"><strong>Primary</strong>#2563EB</div></div>
+          <div class="swatch"><div class="swatch-color" style="background:#f1f5f9"></div><div class="swatch-info"><strong>App BG</strong>#F1F5F9</div></div>
+          <div class="swatch"><div class="swatch-color" style="background:#22c55e"></div><div class="swatch-info"><strong>Green</strong>#22C55E</div></div>
+          <div class="swatch"><div class="swatch-color" style="background:#a855f7"></div><div class="swatch-info"><strong>Purple</strong>#A855F7</div></div>
+          <div class="swatch"><div class="swatch-color" style="background:#38bdf8"></div><div class="swatch-info"><strong>Sky</strong>#38BDF8</div></div>
+        </div>
+      </section>
+
+      <section class="sg-section">
+        <h2>Border radius</h2>
+        <div class="sg-row">
+          <div class="card rounded-xl p-4" style="width:120px;text-align:center">rounded-xl (12px)</div>
+          <div class="card rounded-2xl p-4" style="width:120px;text-align:center">rounded-2xl (16px)</div>
+        </div>
+      </section>
+
+      <section class="sg-section">
+        <h2>Buttons & badges</h2>
+        <div class="sg-row">
+          <button type="button" class="btn btn-primary rounded-xl">Primary</button>
+          <button type="button" class="btn btn-secondary rounded-xl">Secondary</button>
+          <span class="badge badge-green">+8.2%</span>
+          <span class="badge badge-neutral">0%</span>
+        </div>
+      </section>
+
+      <section class="sg-section">
+        <h2>Input & language switch</h2>
+        <div class="sg-row" style="align-items: flex-start">
+          <div class="input-group" style="min-width:280px">
+            <label class="input-label">Username / IIN</label>
+            <div class="input-wrap">
+              <span class="input-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </span>
+              <input class="input rounded-xl" type="text" placeholder="Enter your username or IIN" />
+            </div>
+          </div>
+          <div class="lang-switch">
+            <button type="button" class="active">EN</button>
+            <button type="button">RU</button>
+            <button type="button">KZ</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="sg-section">
+        <h2>Card & sidebar preview</h2>
+        <div class="sg-row">
+          <div class="card rounded-2xl card-body" style="flex:1;min-width:200px">
+            <div class="icon-circle icon-circle--green mb-4" style="margin-bottom:1rem">📊</div>
+            <div class="h2">12,480</div>
+            <p class="text-sm">Total Students</p>
+          </div>
+          <div class="sg-sidebar-preview rounded-2xl">
+            <div class="logo">
+              <div class="logo-mark">Q</div>
+              <div class="logo-text">QazTU</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="assets/js/i18n.js"></script>
+  </body>
+</html>
